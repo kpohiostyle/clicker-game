@@ -1,0 +1,50 @@
+body{
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Stardos Stencil', cursive;
+}
+
+.bg-image{
+  min-height: 200vh;
+  background-image: url('./assets/bg-main.png');
+  background-position: center;
+  background-size: cover;
+}
+.planet img{
+  max-height: 10vh;
+  max-width: 10vh;
+}
+.main-image{
+  max-height: 30vh;
+}
+.card img{
+  max-width: 10vh;
+    max-height: 10vh;
+}
+.card{
+  min-width: 15vh;
+  background-color: transparent;
+  color:white;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/palpatine.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+.threat{
+  font-size: 72px;
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+  margin-top: 10rem;
+}
+.hidden{
+  display: none;
+}

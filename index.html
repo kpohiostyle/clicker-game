@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Republic Envasion</title>
+</head>
+
+<body>
+    <header class="container-fluid text-light">
+
+    </header>
+    <main class="container-fluid bg-image text-light">
+        <div class="row ">
+            <div class="col m-5">
+                <h4>Click The Storm Trooper To Add To Your Army</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 m-5 d-flex text-center">
+                <div class='card action'>
+                    <img class='card-img-top' src="./assets/stormtrooper.png" class="main-image"
+                        alt="little stormtropper" onclick="clickAdd()">
+                    <div class="card-body">
+                        <h5>Storm Troopers: <span id="count"></span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 planet p-4 d-flex justify-content-md-end">
+                <img src="./assets/Hoth.png" alt="" onclick="attack('hoth')">
+                <img src="./assets/jedha.jpg" alt="" onclick="attack('jedha')">
+                <img src="./assets/naboo.png" alt="" onclick="attack('naboo')">
+                <img src="./assets/tatooine.jpg" alt="" onclick="attack('tatooine')">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-md-end text-dark">
+            <div class=" col-2 col-md-2">
+                <div class="card action">
+                    <div class="card-header">
+                        <h5>Force</h5>
+                    </div>
+                    <img class="card-img-top d-flex justify-content-center" src="./assets/darkforce.jpg"
+                        onclick="buyForce()" draggable="false" alt="">
+                    <div class="card-body" id='booster'>
+                        <h5 class="card-title">Price: $<span id='dprice'></span></h5>
+                        <h5 class="card-title">Multiplier: <span id='dmodifier'></span></h5>
+                        <h5 class="card-title">Quantity: <span id='dquantity'></span></h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2 col-md-2">
+                <div class="card action">
+                    <div class="card-header">
+                        <h5>Sith Lord</h5>
+                    </div>
+                    <img class="card-img-top" src="./assets/sithlord.png" onclick="buySithLord()" draggable="false"
+                        alt="">
+                    <div class="card-body" id='booster'>
+                        <h5 class="card-title">Price: $<span id='sprice'></span></h5>
+                        <h5 class="card-title">Multiplier: <span id='smodifier'></span></h5>
+                        <h5 class="card-title">Quantity: <span id='squantity'></span></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="card action">
+                    <div class="card-header">
+                        <h5>Imperial Walker</h5>
+                    </div>
+                    <img class="card-img-top" src="./assets/walker.jpg" onclick="buyWalker()" draggable="false" alt="">
+                    <div class="card-body" id=''>
+                        <h5 class="card-title">Price: $<span id='wprice'></span></h5>
+                        <h5 class="card-title">Multiplier: <span id='wmodifier'></span></h5>
+                        <h5 class="card-title">Quantity: <span id='wquantity'></span></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-md-2">
+                <div class="card action">
+                    <div class="card-header">
+                        <h5>Death Star</h5>
+                    </div>
+                    <img class="card-img-top" src="./assets/deathstar.jpg" onclick="buyDeathStar()" draggable="false"
+                        alt="">
+                    <div class="card-body" id=''>
+                        <h5 class="card-title">Price: $<span id='dsprice'></span></h5>
+                        <h5 class="card-title">Multiplier: <span id='dsmodifier'></span></h5>
+                        <h5 class="card-title">Quantity: <span id='dsquantity'></span></h5>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="overlay hidden" id='overlay' onclick="removeOverlay()">
+            <h1 class='threat'>DO NOT FAIL ME AGAIN</h1>
+        </div>
+    </main>
+    <footer class="container-fluid text-light">
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
